@@ -8,4 +8,7 @@ return {
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     opts = {},
   },
+  {
+    'christoomey/vim-tmux-navigator',
+  },
 }
