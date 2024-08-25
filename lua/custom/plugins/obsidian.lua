@@ -19,11 +19,11 @@ return {
     workspaces = {
       {
         name = 'personal',
-        path = '~/03-notes/obsidian/01-personal',
+        path = '/c/Users/LiamM/Documents/Notes/01-personal',
       },
       {
         name = 'education',
-        path = '~/03-notes/obsidian/02-education',
+        path = '/c/Users/LiamM/Documents/Notes/01-education',
       },
     },
   },
