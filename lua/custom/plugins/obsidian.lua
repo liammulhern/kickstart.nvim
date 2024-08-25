@@ -23,7 +23,7 @@ return {
       },
       {
         name = 'education',
-        path = '/c/Users/LiamM/Documents/Notes/01-education',
+        path = '/c/Users/LiamM/Documents/Notes/02-education',
       },
     },
   },
