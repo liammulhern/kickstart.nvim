@@ -126,6 +126,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+require 'custom.workflows'
+vim.opt.conceallevel = 1
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -277,6 +280,14 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          file_ignore_patterns = {
+            '.git/.*',
+            '.git\\*',
+            '.obsidian/*',
+            '.obsidian\\*',
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -492,7 +503,7 @@ require('lazy').setup({
         clangd = {
           cmd = { 'clangd', '--background-index' },
         },
-        -- gopls = {},
+        gopls = {},
         pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -520,6 +531,10 @@ require('lazy').setup({
         },
         emmet_language_server = {},
         tailwindcss = {},
+        texlab = {
+          filetypes = { 'tex', 'plaintex', 'bib', 'markdown' },
+        },
+        ltex = {},
       }
 
       -- Ensure the servers and tools above are installed
